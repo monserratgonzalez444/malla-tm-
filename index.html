@@ -1,66 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Malla Curricular Tecnología Médica</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
   <style>
-    /* Estilo para índice */
-    #indice {
-      background: #cce5ff;
-      border: 2px solid #99ccff;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 800px;
-      border-radius: 10px;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f6;
+      padding: 40px;
+      color: #4a0033;
     }
-    #indice h2 {
+
+    h1 {
       text-align: center;
-      color: #004080;
+      color: #a83264;
     }
-    #indice ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
+
+    .anio {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 40px;
+      color: #a83264;
+      border-bottom: 2px solid #a83264;
+      display: inline-block;
+      padding-bottom: 5px;
     }
-    #indice li {
-      background: #e6f0ff;
-      border-radius: 6px;
-      padding: 6px 10px;
+
+    .semestre {
+      background: #f9d6e8;
+      border: 2px solid #e29ab0;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 400px;
+    }
+
+    .semestre h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #7a2543;
+    }
+
+    .curso {
+      background: #ffe7f0;
+      border: 1px solid #e29ab0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background 0.3s;
+      user-select: none;
     }
-    #indice li:hover {
-      background-color: #b3d1ff;
+
+    .aprobado {
+      color: #800020;
+      text-decoration: line-through;
+      background: #f2ccd8;
     }
-    #indice a {
-      text-decoration: none;
-      color: #004080;
-      font-weight: 600;
+
+    .no-cursable {
+      color: gray;
+      background: #f0f0f0;
+    }
+
+    #infoBox {
+      background: #ffe7f0;
+      border: 2px solid #e29ab0;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 15px;
+      border-radius: 10px;
+      color: #7a2543;
+      font-style: italic;
+      text-align: center;
+      min-height: 60px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.8em;
+      color: #a83264;
     }
   </style>
+  <script>
+    function mostrarInfo(nombre, requisitos) {
+      const infoBox = document.getElementById('infoBox');
+      infoBox.innerHTML = `<strong>${nombre}</strong><br><em>${requisitos}</em>`;
+      infoBox.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleEstado(element) {
+      if (element.classList.contains('aprobado')) {
+        element.classList.remove('aprobado');
+        element.classList.add('no-cursable');
+      } else if (element.classList.contains('no-cursable')) {
+        element.classList.remove('no-cursable');
+      } else {
+        element.classList.add('aprobado');
+      }
+    }
+  </script>
 </head>
 <body>
-
   <h1>Malla Curricular - Tecnología Médica</h1>
 
-  <section id="indice">
-    <h2>Índice de Semestres</h2>
-    <ul>
-      <li><a href="#primer-anio-i">Primer Año - I Semestre</a></li>
-      <li><a href="#primer-anio-ii">Primer Año - II Semestre</a></li>
-      <li><a href="#segundo-anio-iii">Segundo Año - III Semestre</a></li>
-      <li><a href="#segundo-anio-iv">Segundo Año - IV Semestre</a></li>
-      <li><a href="#tercer-anio-v">Tercer Año - V Semestre</a></li>
-      <li><a href="#tercer-anio-vi">Tercer Año - VI Semestre</a></li>
-      <li><a href="#cuarto-anio-vii">Cuarto Año - VII Semestre</a></li>
-      <li><a href="#cuarto-anio-viii">Cuarto Año - VIII Semestre</a></li>
-      <li><a href="#quinto-anio-ix">Quinto Año - IX Semestre</a></li>
-      <li><a href="#quinto-anio-x">Quinto Año - X Semestre</a></li>
-    </
+  <div class="anio">Primer Año</div>
 
-    
+  <div class="semestre">
+    <h3>I Semestre</h3>
+    <div class="curso" onclick="mostrarInfo('Anatomía Humana', 'Abre Histoembriología'); toggleEstado(this)">Anatomía Humana</div>
+    <div class="curso" onclick="mostrarInfo('Biología Celular', 'Abre Histoembriología / Infectología'); toggleEstado(this)">Biología Celular</div>
+    <div class="curso" onclick="mostrarInfo('Laboratorio de Biología Celular', 'Abre Infectología'); toggleEstado(this)">Laboratorio de Biología Celular</div>
+    <div class="curso" onclick="mostrarInfo('Química General', 'Abre Química Orgánica'); toggleEstado(this)">Química General</div>
+    <div class="curso" onclick="mostrarInfo('Introducción a la Tecnología Médica', 'Abre Bioética'); toggleEstado(this)">Introducción a la Tecnología Médica</div>
+    <div class="curso" onclick="mostrarInfo('Elementos de Álgebra y Cálculo', 'Abre Física General'); toggleEstado(this)">Elementos de Álgebra y Cálculo</div>
+  </div>
+
+  <div id="infoBox" class="info-box">Haz clic en un curso para ver más información.</div>
+
+  <footer>
+    &copy; 2025 Malla Curricular Tecnología Médica.
+  </footer>
+</body>
+</html>
