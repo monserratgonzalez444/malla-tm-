@@ -2,19 +2,110 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Curricular</title>
+  <title>Malla Curricular Tecnología Médica</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Malla Curricular Tecnología Médica</h1>
-  <div class="grid">
-    <div class="curso" onclick="mostrarInfo('Anatomía')">Anatomía</div>
-    <div class="curso" onclick="mostrarInfo('Histología')">Histología</div>
-    <div class="curso" onclick="mostrarInfo('Bioquímica')">Bioquímica</div>
-    <div class="curso" onclick="mostrarInfo('Fisiología')">Fisiología</div>
-    <!-- Agrega más cursos aquí -->
+  <h1>Malla Curricular - Tecnología Médica</h1>
+
+  <div class="anio">Primer Año</div>
+
+  <div class="semestre">
+    <h3>I Semestre</h3>
+    <div class="curso">Anatomía Humana <span class="requisito">(abre Histoembriología)</span></div>
+    <div class="curso">Biología Celular <span class="requisito">(abre Histoembriología / Infectología)</span></div>
+    <div class="curso">Laboratorio de Biología Celular <span class="requisito">(abre Infectología)</span></div>
+    <div class="curso">Química General <span class="requisito">(abre Química Orgánica)</span></div>
+    <div class="curso">Introducción a la Tecnología Médica <span class="requisito">(abre Bioética)</span></div>
+    <div class="curso">Elementos de Álgebra y Cálculo <span class="requisito">(abre Física General)</span></div>
   </div>
-  <div id="infoBox" class="info-box"></div>
-  <script src="script.js"></script>
+
+  <div class="semestre">
+    <h3>II Semestre</h3>
+    <div class="curso">Histoembriología <span class="requisito">(abre Fisiología Humana)</span></div>
+    <div class="curso">Física General <span class="requisito">(abre Técnica Histológica y Citológica I / Histología Clínica)</span></div>
+    <div class="curso">Química Orgánica <span class="requisito">(abre Bioquímica)</span></div>
+    <div class="curso">Inglés I <span class="requisito">(abre Inglés II)</span></div>
+    <div class="curso">Habilidades Comunicativas <span class="requisito">(abre Bioética / Razonamiento Científico)</span></div>
+  </div>
+
+  <div class="anio">Segundo Año</div>
+
+  <div class="semestre">
+    <h3>III Semestre</h3>
+    <div class="curso">Fisiología Humana <span class="requisito">(abre Fisiopatología / Técnica Histológica y Citológica I / Histología Clínica)</span></div>
+    <div class="curso">Bioquímica <span class="requisito">(abre Farmacología / Técnica Histológica y Citológica I / Histología Clínica)</span></div>
+    <div class="curso">Bioética <span class="requisito">(abre Técnica Histológica y Citológica I / Histología Clínica)</span></div>
+    <div class="curso">Infectología <span class="requisito">(abre Técnica Histológica y Citológica I / Histología Clínica)</span></div>
+    <div class="curso">Inglés II <span class="requisito">(abre Inglés III / Técnica Histológica y Citológica I / Histología Clínica)</span></div>
+    <div class="curso">Razonamiento Científico <span class="requisito">(abre Técnica Histológica y Citológica I / Histología Clínica)</span></div>
+  </div>
+
+  <div class="semestre">
+    <h3>IV Semestre</h3>
+    <div class="curso">Fisiopatología <span class="requisito">(abre Salud Pública I / Anatomía Patológica I)</span></div>
+    <div class="curso">Farmacología <span class="requisito">(abre Procedimientos de Tecnología Médica y Bioseguridad)</span></div>
+    <div class="curso">Inglés III <span class="requisito">(abre Inglés IV)</span></div>
+    <div class="curso">Técnica Histológica y Citológica I <span class="requisito">(abre Técnica Histológica y Citológica II)</span></div>
+    <div class="curso">Histología Clínica <span class="requisito">(abre Anatomía Patológica I)</span></div>
+  </div>
+
+  <div class="anio">Tercer Año</div>
+
+  <div class="semestre">
+    <h3>V Semestre</h3>
+    <div class="curso">Procedimientos de Tecnología Médica y Bioseguridad <span class="requisito">(abre Salud Pública II)</span></div>
+    <div class="curso">Salud Pública I <span class="requisito">(abre Salud Pública II)</span></div>
+    <div class="curso">Inglés IV</div>
+    <div class="curso">Técnica Histológica y Citológica II <span class="requisito">(abre Biología Molecular y Genética / Diagnóstico Histoquímico)</span></div>
+    <div class="curso">Anatomía Patológica I <span class="requisito">(abre Diagnóstico Histoquímico / Anatomía Patológica II)</span></div>
+  </div>
+
+  <div class="semestre">
+    <h3>VI Semestre</h3>
+    <div class="curso">Salud Pública II <span class="requisito">(abre Administración y Gestión en Salud / Educación en Salud / Metodología de la Investigación)</span></div>
+    <div class="curso">Pensamiento Crítico <span class="requisito">(abre Responsabilidad Social)</span></div>
+    <div class="curso">Biología Molecular y Genética / Diagnóstico <span class="requisito">(abre Fundamentos de Citogenética / Integrador I)</span></div>
+    <div class="curso">Diagnóstico Histoquímico <span class="requisito">(abre Diagnóstico Inmunohistoquímico / Integrador I)</span></div>
+    <div class="curso">Anatomía Patológica II <span class="requisito">(abre Administración y Gestión en Salud / Educación en Salud / Diagnóstico Inmunohistoquímico / Citopatología I / Integrador I)</span></div>
+  </div>
+
+  <div class="anio">Cuarto Año</div>
+
+  <div class="semestre">
+    <h3>VII Semestre</h3>
+    <div class="curso">Administración y Gestión en Salud / Educación en Salud <span class="requisito">(abre Gestión y Aseguramiento de la Calidad)</span></div>
+    <div class="curso">Educación en Salud</div>
+    <div class="curso">Fundamentos de Citogenética <span class="requisito">(abre Diagnóstico Citogenético / Diagnóstico Molecular)</span></div>
+    <div class="curso">Citopatología I <span class="requisito">(abre Citopatología II)</span></div>
+    <div class="curso">Integrador I <span class="requisito">(abre Metodología de la Investigación / Gestión y Aseguramiento de la Calidad / Diagnóstico Citogenético / Diagnóstico Molecular / Citopatología II)</span></div>
+    <div class="curso">Diagnóstico Inmunohistoquímico <span class="requisito">(abre Diagnóstico Molecular)</span></div>
+  </div>
+
+  <div class="semestre">
+    <h3>VIII Semestre</h3>
+    <div class="curso">Metodología de la Investigación <span class="requisito">(abre Seminario de Investigación / Integrador II)</span></div>
+    <div class="curso">Gestión y Aseguramiento de la Calidad <span class="requisito">(abre Seminario de Investigación / Integrador II)</span></div>
+    <div class="curso">Diagnóstico Citogenético <span class="requisito">(abre Seminario de Investigación / Integrador II)</span></div>
+    <div class="curso">Diagnóstico Molecular <span class="requisito">(abre Seminario de Investigación / Integrador II)</span></div>
+    <div class="curso">Citopatología II <span class="requisito">(abre Seminario de Investigación / Integrador II)</span></div>
+  </div>
+
+  <div class="anio">Quinto Año</div>
+
+  <div class="semestre">
+    <h3>IX Semestre</h3>
+    <div class="curso">Responsabilidad Social</div>
+    <div class="curso">Seminario de Investigación</div>
+  </div>
+
+  <div class="semestre">
+    <h3>X Semestre</h3>
+    <div class="curso">Integrador II</div>
+  </div>
+
+  <footer>
+    &copy; 2025 Malla Curricular Tecnología Médica. Desarrollado con ❤️ en GitHub Pages.
+  </footer>
 </body>
 </html>
