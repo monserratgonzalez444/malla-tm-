@@ -1,34 +1,34 @@
 /* Estilo general */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f5faff;
+  background: #fff0f6; /* rosa muy suave */
   padding: 40px;
-  color: #333;
+  color: #4a0033; /* rosa oscuro */
 }
 
 h1, h2, h3 {
   text-align: center;
-  color: #004080;
+  color: #a83264; /* rosa intenso */
 }
 
 .semestre {
-  background: #e0efff;
-  border: 2px solid #b0d4ff;
+  background: #f9d6e8; /* rosa claro */
+  border: 2px solid #e29ab0; /* rosa medio */
   padding: 20px;
   margin: 20px auto;
   border-radius: 12px;
   max-width: 800px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 10px rgba(162, 50, 100, 0.3);
 }
 
 .semestre h3 {
   margin-bottom: 10px;
-  color: #003366;
+  color: #7a2543; /* rosa oscuro */
 }
 
 .curso {
-  background: #ffffff;
-  border: 1px solid #d0d0d0;
+  background: #ffe7f0; /* rosa muy claro */
+  border: 1px solid #e29ab0; /* rosa medio */
   padding: 10px 15px;
   margin: 8px 0;
   border-radius: 8px;
@@ -37,29 +37,4 @@ h1, h2, h3 {
 }
 
 .curso:hover {
-  background: #d0e9ff;
-}
-
-.requisito {
-  font-size: 0.9em;
-  color: #666;
-  margin-left: 10px;
-}
-
-.anio {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-top: 40px;
-  color: #0055aa;
-  border-bottom: 2px solid #0055aa;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 0.8em;
-  color: #888;
-}
+  backgroun
