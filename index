@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Curricular Tecnología Médica</h1>
+  <div class="grid">
+    <div class="curso" onclick="mostrarInfo('Anatomía')">Anatomía</div>
+    <div class="curso" onclick="mostrarInfo('Histología')">Histología</div>
+    <div class="curso" onclick="mostrarInfo('Bioquímica')">Bioquímica</div>
+    <div class="curso" onclick="mostrarInfo('Fisiología')">Fisiología</div>
+    <!-- Agrega más cursos aquí -->
+  </div>
+  <div id="infoBox" class="info-box"></div>
+  <script src="script.js"></script>
+</body>
+</html>
