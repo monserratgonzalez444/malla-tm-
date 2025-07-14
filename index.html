@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Malla Curricular Tecnología Médica</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function mostrarInfo(nombre, requisitos) {
-      const infoBox = document.getElementById('infoBox');
-      infoBox.innerHTML = `<strong>${nombre}</strong><br><em>${requisitos}</em>`;
-      infoBox.scrollIntoView({ behavior: 'smooth' });
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <style>
+    /* Estilo para índice */
+    #indice {
+      background: #cce5ff;
+      border: 2px solid #99ccff;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 10px;
     }
-  </script>
+    #indice h2 {
+      text-align: center;
+      color: #004080;
+    }
+    #indice ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    #indice li {
+      background: #e6f0ff;
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #indice li:hover {
+      background-color: #b3d1ff;
+    }
+    #indice a {
+      text-decoration: none;
+      color: #004080;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Malla Curricular - Tecnología Médica</h1>
 
-  <div class="anio">Primer Año</div>
+  <section id="indice">
+    <h2>Índice de Semestres</h2>
+    <ul>
+      <li><a href="#primer-anio-i">Primer Año - I Semestre</a></li>
+      <li><a href="#primer-anio-ii">Primer Año - II Semestre</a></li>
+      <li><a href="#segundo-anio-iii">Segundo Año - III Semestre</a></li>
+      <li><a href="#segundo-anio-iv">Segundo Año - IV Semestre</a></li>
+      <li><a href="#tercer-anio-v">Tercer Año - V Semestre</a></li>
+      <li><a href="#tercer-anio-vi">Tercer Año - VI Semestre</a></li>
+      <li><a href="#cuarto-anio-vii">Cuarto Año - VII Semestre</a></li>
+      <li><a href="#cuarto-anio-viii">Cuarto Año - VIII Semestre</a></li>
+      <li><a href="#quinto-anio-ix">Quinto Año - IX Semestre</a></li>
+      <li><a href="#quinto-anio-x">Quinto Año - X Semestre</a></li>
+    </
 
-  <div class="semestre">
-    <h3>I Semestre</h3>
-    <div class="curso" onclick="mostrarInfo('Anatomía Humana', 'Abre Histoembriología')">Anatomía Humana</div>
-    <div class="curso" onclick="mostrarInfo('Biología Celular', 'Abre Histoembriología / Infectología')">Biología Celular</div>
-    <div class="curso" onclick="mostrarInfo('Laboratorio de Biología Celular', 'Abre Infectología')">Laboratorio de Biología Celular</div>
-    <div class="curso" onclick="mostrarInfo('Química General', 'Abre Química Orgánica')">Química General</div>
-    <div class="curso" onclick="mostrarInfo('Introducción a la Tecnología Médica', 'Abre Bioética')">Introducción a la Tecnología Médica</div>
-    <div class="curso" onclick="mostrarInfo('Elementos de Álgebra y Cálculo', 'Abre Física General')">Elementos de Álgebra y Cálculo</div>
-  </div>
-
-  <!-- Se omiten repeticiones aquí para acortar -->
-  <!-- Puedes aplicar el mismo formato "onclick" en cada curso -->
-
-  <div id="infoBox" class="info-box">Haz clic en un curso para ver más información.</div>
-
-  <footer>
-    &copy; 2025 Malla Curricular Tecnología Médica. Desarrollado con ❤️ en GitHub Pages.
-  </footer>
-</body>
-</html>
+    
